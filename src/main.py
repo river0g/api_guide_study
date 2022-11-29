@@ -1,7 +1,9 @@
 from fastapi import FastAPI, status
 # from fastapi.responses import JSONResponse
+from src.routes import lesson1
 
 app = FastAPI()
+app.include_router(lesson1.router)
 
 
 @app.get("/")
